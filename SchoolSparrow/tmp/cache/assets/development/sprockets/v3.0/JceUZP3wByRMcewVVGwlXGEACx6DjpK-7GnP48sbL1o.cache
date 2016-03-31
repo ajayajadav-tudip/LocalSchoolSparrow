@@ -1,0 +1,33 @@
+I"Ò(function() {
+  var usersReady;
+
+  usersReady = function() {
+    if ($('#sign-in-modal').length) {
+      $('#sign-in-modal').modal();
+    }
+    if ($('#sign-up-modal').length) {
+      $('#sign-up-modal').modal();
+    }
+    if ($('#forgot-password-modal').length) {
+      $('#forgot-password-modal').modal();
+    }
+    if ($('#confirmation-new-modal').length) {
+      $('#confirmation-new-modal').modal();
+    }
+    if ('#change-password-modal'.length) {
+      $('##change-password-modal').modal();
+    }
+    return $('#new_user').validate({
+      rules: {
+        password: 'required',
+        company_name: {
+          equalTo: '#password'
+        }
+      }
+    });
+  };
+
+  $(document).ready(usersReady);
+
+}).call(this);
+:ET

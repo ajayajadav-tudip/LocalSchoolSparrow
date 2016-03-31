@@ -1,0 +1,22 @@
+I"Ÿ(function() {
+  var usersReady;
+
+  usersReady = function() {
+    return $('#new_user').validate({
+      rules: {
+        'user[email]': 'required',
+        'user[password]': 'required',
+        'user[retypepassword]': {
+          equalTo: '#user[password]'
+        }
+      },
+      messages: {
+        'user[email]': 'Please Enter valid Email'
+      }
+    });
+  };
+
+  $(document).ready(usersReady);
+
+}).call(this);
+:ET

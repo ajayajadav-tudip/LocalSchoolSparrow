@@ -1,0 +1,43 @@
+I"Ö(function() {
+  var usersReady;
+
+  usersReady = function() {
+    jQuery.validator.addMethod('letters_only', (function(value, element) {
+      return this.optional(element) || /^[a-z ,.'-]+$/i.test(value);
+    }), 'Letters only');
+    jQuery.validator.addMethod('custom_email', (function(value, element) {
+      return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
+    }), 'Invalid email');
+    return $('#new_user').validate({
+      rules: {
+        'user[email]': {
+          custom_email: true
+        },
+        'user[password]': {
+          required: true
+        },
+        'user[retypepassword]': {
+          equalTo: '#user_password'
+        }
+      },
+      messages: {
+        'user[email]': 'Please Enter valid Email',
+        'user[retypepassword]': {
+          equalTo: 'same'
+        }
+      },
+      highlight: function(element) {
+        return $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+      },
+      unhighlight: function(element) {
+        return $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+      },
+      errorElement: 'span',
+      errorClass: 'help-block'
+    });
+  };
+
+  $(document).ready(usersReady);
+
+}).call(this);
+:ET

@@ -1,0 +1,15 @@
+I"Ú(function() {
+  var usersReady;
+
+  usersReady = function() {
+    return $('#new_user').validate({
+      rules: {
+        'user[email]': 'required'
+      }
+    });
+  };
+
+  $(document).ready(usersReady);
+
+}).call(this);
+:ET

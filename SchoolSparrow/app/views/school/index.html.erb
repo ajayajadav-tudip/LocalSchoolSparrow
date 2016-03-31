@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>List All</h1>
+
+<table border="1">
+  <tr >
+    <th>School Name</th>
+    <th>School Location</th>
+    <th>Student Capacity</th>
+    <th>Email Id</th>
+  </tr>
+
+  <% @schools.each do |s| %>
+      <tr>
+        <td><%= s.SchoolName %></td>
+        <td><%= s.School_Location %></td>
+        <td><%= s.Student_Capacity %></td>
+        <td><%= s.Email_Id %></td>
+        <td><%= link_to 'edit', edit_school_path(s) %></td>
+        <td><%= link_to 'delete', school_path(s), method: :delete, data: { confirm: 'Are you sure ?'} %></td>
+      </tr>
+
+  <% end %>
+</table>

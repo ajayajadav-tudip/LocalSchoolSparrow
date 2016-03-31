@@ -1,0 +1,19 @@
+I"O(function() {
+  var usersReady;
+
+  usersReady = function() {
+    return $('#new_user').validate({
+      rules: {
+        'user[email]': 'required',
+        'user[password]': 'required',
+        'user[company_name]': {
+          equalTo: 'user[password]'
+        }
+      }
+    });
+  };
+
+  $(document).ready(usersReady);
+
+}).call(this);
+:ET

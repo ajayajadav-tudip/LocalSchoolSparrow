@@ -1,0 +1,30 @@
+<h1>Edit School Registration Form</h1>
+
+<%= form_for @school, url:school_path(@school), method: :Patch do |f| %>
+
+    <div>
+      <p>
+        <%= f.label :SchoolName %>
+        <%= f.text_field :SchoolName %>
+      </p>
+
+      <p>
+        <%= f.label :School_Location %>
+        <%= f.text_field :School_Location %>
+      </p>
+
+      <p>
+        <%= f.label :Student_Capacity %>
+        <%= f.text_field :Student_Capacity %>
+      </p>
+
+      <p>
+        <%= f.label :Email_Id %>
+        <%= f.text_field :Email_Id %>
+      </p>
+
+      <p>
+        <%= f.submit %>
+      </p>
+    </div>
+<% end %>

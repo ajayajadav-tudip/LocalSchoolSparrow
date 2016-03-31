@@ -1,0 +1,18 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => '.navbar-collapse', "data-toggle" => 'collapse', :type => 'button'}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => 'http://localhost:3000'}
+        %img.img-responsive{:alt => '', :src => '/assets/logo-big.jpg'}
+    .navbar-collapse.collapse.navbar-right.scroll-me
+      %ul.nav.navbar-nav
+        -#%li
+        -#  %a{:href => '#home'} Project Planner
+        %li
+          = link_to('Sign Up',new_user_registration_path)
+
+        %li
+          = link_to('Sign in', new_user_session_path)

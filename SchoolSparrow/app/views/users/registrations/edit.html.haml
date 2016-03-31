@@ -1,0 +1,65 @@
+%h2
+= form_for(@user , url:update_user_profile_path, html: { method: :put }) do |f|
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true
+  .field
+
+  = f.fields_for :profile do |profile_form|
+    = profile_form.label :date_of_birth
+    %br/
+    = profile_form.text_field :dob, autocomplete: 'off'
+    .field
+    = profile_form.label :phone_number
+    %br/
+    = profile_form.text_field :phonenumber, autocomplete: "off"
+    .field
+    = profile_form.label :photo_upload
+    %br/
+    = profile_form.text_field :photoupload, autocomplete: "off"
+    .field
+    = profile_form.label :rent_buy_unknown
+    %br/
+    = profile_form.text_field :rentvsbuyvsunknown, autocomplete: "off"
+    .field
+    = profile_form.label :when_looking_for
+    %br/
+    = profile_form.text_field :whenlookkingfor, autocomplete: "off"
+    .field
+    = profile_form.label :no_of_beds
+    %br/
+    = profile_form.text_field :noofbeds, autocomplete: "off"
+    .field
+    = profile_form.label :no_of_bathrooms
+    %br/
+    = profile_form.text_field :noofbathrooms, autocomplete: "off"
+    .field
+    = profile_form.label :budget
+    %br/
+    = profile_form.text_field :budget, autocomplete: "off"
+    .field
+    = profile_form.label :no_of_children
+    %br/
+    = profile_form.text_field :noofchildren, autocomplete: "off"
+    .field
+    = profile_form.label :age_child
+    %br/
+    = profile_form.text_field :agechild, autocomplete: "off"
+    .field
+    = profile_form.label :decision_1
+    %br/
+    = profile_form.text_field :decision1, autocomplete: "off"
+    .field
+    = profile_form.label :Decesion_2
+    %br/
+    = profile_form.text_field :decision2, autocomplete: "off"
+    .field
+    = profile_form.label :work_adresses
+    %br/
+    = profile_form.text_area :workaddress, autocomplete: "off"
+    .actions
+    = f.submit "Update"
+%h3 Cancel my account
+%p
+  = link_to "Back", :back

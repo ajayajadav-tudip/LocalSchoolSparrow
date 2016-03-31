@@ -1,0 +1,58 @@
+%body.focusedform
+  .verticalcenter
+    %a{:href => "http://localhost:3000"}
+      %img.brand{:alt => "Logo", :src => "/assets/logo-big.jpg"}/
+    .panel.panel-primary
+      .panel-body
+        = render 'layouts/flash_message'
+        = devise_error_messages!
+        %h4.text-center{:style => "margin-bottom: 25px;"} Log in
+        = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "form-horizontal"}) do |f|
+          .field.form-group
+            .control-label.col-sm-4{:style => 'text-align: left'}
+              = f.label :email
+            .col-sm-8
+              = f.email_field :email, autofocus: true , placeholder: 'Email' , :class =>"form-control"
+          .field.form-group
+            .control-label.col-sm-4{:style => 'text-align: left'}
+              = f.label :password
+            .col-sm-8
+              = f.password_field :password, placeholder: 'Password', autocomplete: "off", :class =>"form-control"
+          %br
+          - if devise_mapping.rememberable?
+            .clearfix
+              .pull-right
+                = f.check_box :remember_me
+                = f.label :remember_me
+          .actions
+            = f.submit "Log in", :class =>"btn btn-primary btn-block"
+      .panel-footer
+        %center
+          = render "users/shared/links"
+
+
+  -#%body.focusedform
+  -#  .verticalcenter
+  -#    %a{:href => "index.htm"}
+  -#      %img.brand{:alt => "Logo", :src => "assets/img/logo-big.png"}/
+  -#    .panel.panel-primary
+  -#      .panel-body
+  -#        %h4.text-center{:style => "margin-bottom: 25px;"} Log in to get started
+  -#        %form.form-horizontal{:action => "session_path"}
+  -#          .form-group
+  -#            %label.control-label.col-sm-4{:for => "email", :style => "text-align: left;"} Email
+  -#            .col-sm-8
+  -#              %input#email.form-control{:placeholder => "Email", :type => "text"}
+  -#          .form-group
+  -#            %label.control-label.col-sm-4{:for => "password", :style => "text-align: left;"} Password
+  -#            .col-sm-8
+  -#              %input#password.form-control{:placeholder => "Password", :type => "password"}
+  -#          .clearfix
+  -#            .pull-right
+  -#              %label
+  -#                %input{:checked => "", :type => "checkbox"} Remember Me
+  -#          %a.btn.btn-primary.btn-block{:href => "http://localhost:3000/dashboard"} Log In
+  -#      .panel-footer
+  -#        %a.pull-left.btn.btn-link{:href => "extras-forgotpassword.htm", :style => "padding-left:0"} Forgot password?
+  -#        .pull-right
+  -#          %a.btn.btn-default{:href => "#"} Reset

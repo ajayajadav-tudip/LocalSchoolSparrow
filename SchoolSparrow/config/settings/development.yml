@@ -1,0 +1,6 @@
+mailer:
+  user_name: 'tudip-technology'
+  password: 'tudip123'
+  domain: 'gmail.com'
+  address: 'smtp.sendgrid.net'
+  port: '587'

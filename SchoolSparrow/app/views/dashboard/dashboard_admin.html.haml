@@ -1,0 +1,1338 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %body
+    #headerbar
+      .container
+        .row
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-brown{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-pencil
+              .tiles-footer
+                Create Post
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-grape{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-group
+                .pull-right
+                  %span.badge 2
+              .tiles-footer
+                Contacts
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-primary{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-envelope-o
+                .pull-right
+                  %span.badge 10
+              .tiles-footer
+                Messages
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-inverse{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-camera
+                .pull-right
+                  %span.badge 3
+              .tiles-footer
+                Gallery
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-midnightblue{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-cog
+              .tiles-footer
+                Settings
+          .col-xs-6.col-sm-2
+            %a.shortcut-tiles.tiles-orange{:href => "#"}
+              .tiles-body
+                .pull-left
+                  %i.fa.fa-wrench
+              .tiles-footer
+                Plugins
+    %header.navbar.navbar-inverse.navbar-fixed-top{:role => "banner"}
+      %a#leftmenu-trigger.tooltips{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Toggle Sidebar"}
+      %a#rightmenu-trigger.tooltips{"data-placement" => "left", "data-toggle" => "tooltip", :title => "Toggle Infobar"}
+      .navbar-header.pull-left
+        %a.navbar-brand{:href => "index.htm"} Avant
+      %ul.nav.navbar-nav.pull-right.toolbar
+        %li.dropdown
+          %a.dropdown-toggle.username{"data-toggle" => "dropdown", :href => "#"}
+            %span.hidden-xs
+              #{current_user.first_name}
+              %i.fa.fa-caret-down
+            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}/
+          %ul.dropdown-menu.userinfo.arrow
+            %li.username
+              %a{:href => "#"}
+                .pull-left
+                  %img{:alt => "Jeff Dangerfield", :src => "/assets/dangerfield.png"}/
+                .pull-right
+                  %h5 Howdy, John!
+                  %small
+                    Logged in as
+                    %span john275
+            %li.userlinks
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"}
+                    Edit Profile
+                    %i.pull-right.fa.fa-pencil
+                %li
+                  %a{:href => "#"}
+                    Account
+                    %i.pull-right.fa.fa-cog
+                %li
+                  %a{:href => "#"}
+                    Help
+                    %i.pull-right.fa.fa-question-circle
+                %li.divider
+                %li
+                  %a.text-right{:href => "#"} Sign Out
+        %li.dropdown
+          %a.hasnotifications.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-envelope
+            %span.badge 1
+          %ul.dropdown-menu.messages.arrow
+            %li.dd-header
+              %span You have 1 new message(s)
+              %span
+                %a{:href => "#"} Mark all Read
+            .scrollthis
+              %li
+                %a.active{:href => "#"}
+                  %span.time 6 mins
+                  %img{:alt => "avatar", :src => "/assets/doyle.png"}/
+                  %div
+                    %span.name Alan Doyle
+                    %span.msg Please mail me the files by tonight.
+              %li
+                %a{:href => "#"}
+                  %span.time 12 mins
+                  %img{:alt => "avatar", :src => "/assets/paton.png"}/
+                  %div
+                    %span.name Polly Paton
+                    %span.msg Uploaded all the files to server. Take a look.
+              %li
+                %a{:href => "#"}
+                  %span.time 9 hrs
+                  %img{:alt => "avatar", :src => "/assets/corbett.png"}/
+                  %div
+                    %span.name Simon Corbett
+                    %span.msg I am signing off for today.
+              %li
+                %a{:href => "#"}
+                  %span.time 2 days
+                  %img{:alt => "avatar", :src => "/assets/tennant.png"}/
+                  %div
+                    %span.name David Tennant
+                    %span.msg How are you doing?
+              %li
+                %a{:href => "#"}
+                  %span.time 6 mins
+                  %img{:alt => "avatar", :src => "/assets/doyle.png"}/
+                  %div
+                    %span.name Alan Doyle
+                    %span.msg Please mail me the files by tonight.
+              %li
+                %a{:href => "#"}
+                  %span.time 12 mins
+                  %img{:alt => "avatar", :src => "/assets/paton.png"}/
+                  %div
+                    %span.name Polly Paton
+                    %span.msg Uploaded all the files to server. Take a look.
+            %li.dd-footer
+              %a{:href => "#"} View All Messages
+        %li.dropdown
+          %a.hasnotifications.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-bell
+            %span.badge 3
+          %ul.dropdown-menu.notifications.arrow
+            %li.dd-header
+              %span You have 3 new notification(s)
+              %span
+                %a{:href => "#"} Mark all Seen
+            .scrollthis
+              %li
+                %a.notification-user.active{:href => "#"}
+                  %span.time 4 mins
+                  %i.fa.fa-user
+                  %span.msg New user Registered.
+              %li
+                %a.notification-danger.active{:href => "#"}
+                  %span.time 20 mins
+                  %i.fa.fa-bolt
+                  %span.msg CPU at 92% on server#3!
+              %li
+                %a.notification-success.active{:href => "#"}
+                  %span.time 1 hr
+                  %i.fa.fa-check
+                  %span.msg Server#1 is live.
+              %li
+                %a.notification-warning{:href => "#"}
+                  %span.time 2 hrs
+                  %i.fa.fa-exclamation-triangle
+                  %span.msg Database overloaded.
+              %li
+                %a.notification-order{:href => "#"}
+                  %span.time 10 hrs
+                  %i.fa.fa-shopping-cart
+                  %span.msg New order received.
+              %li
+                %a.notification-failure{:href => "#"}
+                  %span.time 12 hrs
+                  %i.fa.fa-times-circle
+                  %span.msg Application error!
+              %li
+                %a.notification-fix{:href => "#"}
+                  %span.time 12 hrs
+                  %i.fa.fa-wrench
+                  %span.msg Installation Succeeded.
+              %li
+                %a.notification-success{:href => "#"}
+                  %span.time 18 hrs
+                  %i.fa.fa-check
+                  %span.msg Account Created.
+            %li.dd-footer
+              %a{:href => "#"} View All Notifications
+        %li
+          %a#headerbardropdown{:href => "#"}
+            %span
+              %i.fa.fa-level-down
+        %li.dropdown.demodrop
+          %a.dropdown-toggle.tooltips{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-magic
+          %ul#demo-dropdown.dropdown-menu.arrow.dropdown-menu-form
+            %li
+              %label.control-label{:for => "demo-header-variations"} Header Colors
+              %ul#demo-header-variations.list-inline.demo-color-variation
+                %li
+                  %a.color-black{"data-headertheme" => "header-black.css", :href => "javascript:;"}
+                %li
+                  %a.color-dark{"data-headertheme" => "default.css", :href => "javascript:;"}
+                %li
+                  %a.color-red{"data-headertheme" => "header-red.css", :href => "javascript:;"}
+                %li
+                  %a.color-blue{"data-headertheme" => "header-blue.css", :href => "javascript:;"}
+            %li.divider
+            %li
+              %label.control-label{:for => "demo-color-variations"} Sidebar Colors
+              %ul#demo-color-variations.list-inline.demo-color-variation
+                %li
+                  %a.color-lite{"data-theme" => "default.css", :href => "javascript:;"}
+                %li
+                  %a.color-steel{"data-theme" => "sidebar-steel.css", :href => "javascript:;"}
+                %li
+                  %a.color-lavender{"data-theme" => "sidebar-lavender.css", :href => "javascript:;"}
+                %li
+                  %a.color-green{"data-theme" => "sidebar-green.css", :href => "javascript:;"}
+            %li.divider
+            %li
+              %label{:for => "fixedheader"} Fixed Header
+              #fixedheader{:style => "margin-top:5px;"}
+    #page-container
+      / BEGIN SIDEBAR
+      %nav#page-leftbar{:role => "navigation"}
+        / BEGIN SIDEBAR MENU
+        %ul#sidebar.acc-menu
+          %li#search
+            %a{:href => "javascript:;"}
+              %i.fa.fa-search.opacity-control
+            %form
+              %input.search-query{:placeholder => "Search...", :type => "text"}
+                %button{:type => "submit"}
+                  %i.fa.fa-search
+          %li.divider
+          %li
+            %a{:href => "index.htm"}
+              %i.fa.fa-home
+              %span Dashboard
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-th
+              %span Layout Options
+            %ul.acc-menu
+              %li
+                %a{:href => "layout-grid.htm"}
+                  %span Grids
+              %li
+                %a{:href => "layout-horizontal.htm"}
+                  %span Horizontal Navigation
+              %li
+                %a{:href => "layout-horizontal2.htm"}
+                  %span Horizontal Navigation 2
+              %li
+                %a{:href => "layout-fixed.htm"}
+                  %span Fixed Boxed Layout
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-list-ol
+              %span UI Elements
+              %span.badge.badge-indigo 4
+            %ul.acc-menu
+              %li
+                %a{:href => "ui-typography.htm"} Typography
+              %li
+                %a{:href => "ui-buttons.htm"} Buttons
+              %li
+                %a{:href => "tables-basic.htm"} Tables
+              %li
+                %a{:href => "form-layout.htm"} Forms
+              %li
+                %a{:href => "ui-panels.htm"} Panels
+              %li
+                %a{:href => "ui-images.htm"} Images
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-tasks
+              %span UI Components
+              %span.badge.badge-info 12
+            %ul.acc-menu
+              %li
+                %a{:href => "ui-tiles.htm"} Tiles
+              %li
+                %a{:href => "ui-modals.htm"} Modals &amp; Bootbox
+              %li
+                %a{:href => "ui-progressbars.htm"} Progress Bars
+              %li
+                %a{:href => "ui-paginations.htm"} Pagers &amp; Paginations
+              %li
+                %a{:href => "ui-breadcrumbs.htm"} Breadcrumbs
+              %li
+                %a{:href => "ui-labelsbadges.htm"} Labels &amp; Badges
+              %li
+                %a{:href => "ui-alerts.htm"} Alerts &amp; Notificiations
+              %li
+                %a{:href => "ui-sliders.htm"} Sliders &amp; Ranges
+              %li
+                %a{:href => "ui-tabs.htm"} Tabs &amp; Accordions
+              %li
+                %a{:href => "ui-carousel.htm"} Carousel
+              %li
+                %a{:href => "ui-nestable.htm"} Nestable Lists
+              %li
+                %a{:href => "ui-wells.htm"} Wells
+              %li
+                %a{:href => "ui-tour.htm"} Tour
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-table
+              %span Advanced Tables
+            %ul.acc-menu
+              %li
+                %a{:href => "tables-data.htm"} Data Tables
+              %li
+                %a{:href => "tables-responsive.htm"} Responsive Tables
+              %li
+                %a{:href => "tables-editable.htm"} Editable Tables
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-pencil
+              %span Advanced Forms
+              %span.badge.badge-primary 5
+            %ul.acc-menu
+              %li
+                %a{:href => "form-components.htm"} Components
+              %li
+                %a{:href => "form-wizard.htm"} Wizards
+              %li
+                %a{:href => "form-validation.htm"} Validation
+              %li
+                %a{:href => "form-masks.htm"} Masks
+              %li
+                %a{:href => "form-fileupload.htm"} Multiple File Uploads
+              %li
+                %a{:href => "form-dropzone.htm"} Dropzone File Uploads
+              %li
+                %a{:href => "form-ckeditor.htm"} WYSIWYG Editor
+              %li
+                %a{:href => "form-xeditable.htm"} Inline Editor
+              %li
+                %a{:href => "form-imagecrop.htm"} Image Cropping
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-map-marker
+              %span Maps
+            %ul.acc-menu
+              %li
+                %a{:href => "maps-google.htm"} Google Maps
+              %li
+                %a{:href => "maps-vector.htm"} Vector Maps
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-bar-chart-o
+              %span Charts
+            %ul.acc-menu
+              %li
+                %a{:href => "charts-flot.htm"} Extensible
+              %li
+                %a{:href => "charts-svg.htm"} Interactive
+              %li
+                %a{:href => "charts-canvas.htm"} Lightweight
+              %li
+                %a{:href => "charts-inline.htm"} Inline
+          %li
+            %a{:href => "calendar.htm"}
+              %i.fa.fa-calendar
+              %span Calendar
+          %li
+            %a{:href => "gallery.htm"}
+              %i.fa.fa-camera
+              %span Gallery
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-flag
+              %span Icons
+              %span.badge.badge-orange 2
+            %ul.acc-menu
+              %li
+                %a{:href => "icons-fontawesome.htm"} Font Awesome
+              %li
+                %a{:href => "icons-glyphicons.htm"} Glyphicons
+          %li.divider
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-briefcase
+              %span Extras
+              %span.badge.badge-danger 1
+            %ul.acc-menu
+              %li
+                %a{:href => "extras-timeline.htm"} Timeline
+              %li
+                %a{:href => "extras-profile.htm"} Profile
+              %li
+                %a{:href => "extras-inbox.htm"} Inbox
+              %li
+                %a{:href => "extras-search.htm"} Search Page
+              %li
+                %a{:href => "extras-chatroom.htm"} Chat Room
+              %li
+                %a{:href => "extras-invoice.htm"} Invoice
+              %li
+                %a{:href => "extras-registration.htm"} Registration
+              %li
+                %a{:href => "extras-signupform.htm"} Sign Up
+              %li
+                %a{:href => "extras-forgotpassword.htm"} Password Reset
+              %li
+                %a{:href => "extras-login.htm"} Login 1
+              %li
+                %a{:href => "extras-login2.htm"} Login 2
+              %li
+                %a{:href => "extras-404.htm"} 404 Page
+              %li
+                %a{:href => "extras-500.htm"} 500 Page
+          %li
+            %a{:href => "javascript:;"}
+              %i.fa.fa-sitemap
+              %span Unlimited Level Menu
+            %ul.acc-menu
+              %li
+                %a{:href => "javascript:;"} Menu Item 1
+              %li
+                %a{:href => "javascript:;"} Menu Item 2
+                %ul.acc-menu
+                  %li
+                    %a{:href => "javascript:;"} Menu Item 2.1
+                  %li
+                    %a{:href => "javascript:;"} Menu Item 2.2
+                    %ul.acc-menu
+                      %li
+                        %a{:href => "javascript:;"} Menu Item 2.2.1
+                      %li
+                        %a{:href => "javascript:;"} Menu Item 2.2.2
+                        %ul.acc-menu
+                          %li
+                            %a{:href => "javascript:;"} And deeper yet!
+      / END SIDEBAR MENU
+      / BEGIN RIGHTBAR
+      #page-rightbar
+        #chatarea
+          .chatuser
+            %span.pull-right Jane Smith
+            %a#hidechatbtn.btn.btn-default.btn-sm
+              %i.fa.fa-arrow-left
+              Back
+          .chathistory
+            .chatmsg
+              %p Hey! How's it going?
+              %span.timestamp 1:20:42 PM
+            .chatmsg.sent
+              %p Not bad... i guess. What about you? Haven't gotten any updates from you in a long time.
+              %span.timestamp 1:20:46 PM
+            .chatmsg
+              %p Yeah! I've been a bit busy lately. I'll get back to you soon enough.
+              %span.timestamp 1:20:54 PM
+            .chatmsg.sent
+              %p Alright, take care then.
+              %span.timestamp 1:21:01 PM
+          .chatinput
+            %textarea{:name => "", :rows => "2"}
+        #widgetarea
+          .widget
+            .widget-heading
+              %a{"data-target" => "#accsummary", "data-toggle" => "collapse", :href => "javascript:;"}
+                %h4 Account Summary
+            #accsummary.widget-body.collapse.in
+              .widget-block{:style => "background: #7ccc2e; margin-top:10px;"}
+                .pull-left
+                  %small Current Balance
+                  %h5 $71,182
+                .pull-right
+                  #currentbalance
+              .widget-block{:style => "background: #595f69;"}
+                .pull-left
+                  %small Account Type
+                  %h5 Business Plan A
+                .pull-right
+                  %small.text-right Monthly
+                  %h5
+                    $19
+                    %small .99
+              %span.more
+                %a{:href => "#"} Upgrade Account
+          #chatbar.widget
+            .widget-heading
+              %a{"data-target" => "#chatbody", "data-toggle" => "collapse", :href => "javascript:;"}
+                %h4
+                  Online Contacts
+                  %small (5)
+            #chatbody.widget-body.collapse.in
+              %ul.chat-users
+                %li{"data-stats" => "online"}
+                  %a{:href => "javascript:;"}
+                    %img{:alt => "", :src => "/assets/potter.png"}
+                      %span Jeremy Potter
+                %li{"data-stats" => "online"}
+                  %a{:href => "javascript:;"}
+                    %img{:alt => "", :src => "/assets/tennant.png"}
+                      %span David Tennant
+                %li{"data-stats" => "online"}
+                  %a{:href => "javascript:;"}
+                    %img{:alt => "", :src => "/assets/johansson.png"}
+                      %span Anna Johansson
+                %li{"data-stats" => "busy"}
+                  %a{:href => "javascript:;"}
+                    %img{:alt => "", :src => "/assets/jackson.png"}
+                      %span Eric Jackson
+                %li{"data-stats" => "away"}
+                  %a{:href => "javascript:;"}
+                    %img{:alt => "", :src => "/assets/jobs.png"}
+                      %span Howard Jobs
+                /
+                  li data-stats="offline"><a href="javascript:;"><img src="assets/demo/avatar/watson.png" alt=""><span>Annie Watson</span></a></li>
+                  <li data-stats="offline"><a href="javascript:;"><img src="assets/demo/avatar/doyle.png" alt=""><span>Alan Doyle</span></a></li>
+                  <li data-stats="offline"><a href="javascript:;"><img src="assets/demo/avatar/corbett.png" alt=""><span>Simon Corbett</span></a></li>
+                  <li data-stats="offline"><a href="javascript:;"><img src="assets/demo/avatar/paton.png" alt=""><span>Polly Paton</span></a></li
+              %span.more
+                %a{:href => "#"} See all
+          .widget
+            .widget-heading
+              %a{"data-target" => "#taskbody", "data-toggle" => "collapse", :href => "javascript:;"}
+                %h4
+                  Pending Tasks
+                  %small (5)
+            #taskbody.widget-body.collapse.in
+              .contextual-progress{:style => "margin-top:10px;"}
+                .clearfix
+                  .progress-title Backend Development
+                  .progress-percentage
+                    %span.label.label-info Today
+                    25%
+                .progress
+                  .progress-bar.progress-bar-info{:style => "width: 25%"}
+              .contextual-progress
+                .clearfix
+                  .progress-title Bug Fix
+                  .progress-percentage
+                    %span.label.label-primary Tomorrow
+                    17%
+                .progress
+                  .progress-bar.progress-bar-primary{:style => "width: 17%"}
+              .contextual-progress
+                .clearfix
+                  .progress-title Javascript Code
+                  .progress-percentage 70%
+                .progress
+                  .progress-bar.progress-bar-success{:style => "width: 70%"}
+              .contextual-progress
+                .clearfix
+                  .progress-title Preparing Documentation
+                  .progress-percentage 6%
+                .progress
+                  .progress-bar.progress-bar-danger{:style => "width: 6%"}
+              .contextual-progress
+                .clearfix
+                  .progress-title App Development
+                  .progress-percentage 20%
+                .progress
+                  .progress-bar.progress-bar-orange{:style => "width: 20%"}
+              %span.more
+                %a{:href => "ui-progressbars.htm"} View all Pending
+          .widget
+            .widget-heading
+              %a{"data-target" => "#storagespace", "data-toggle" => "collapse", :href => "javascript:;"}
+                %h4 Storage Space
+            #storagespace.widget-body.collapse.in
+              .clearfix{:style => "margin-bottom: 5px;margin-top:10px;"}
+                .progress-title.pull-left 1.31 GB of 1.50 GB used
+                .progress-percentage.pull-right 87.3%
+              .progress
+                .progress-bar.progress-bar-success{:style => "width: 50%"}
+                .progress-bar.progress-bar-warning{:style => "width: 25%"}
+                .progress-bar.progress-bar-danger{:style => "width: 12.3%"}
+          .widget
+            .widget-heading
+              %a{"data-target" => "#serverstatus", "data-toggle" => "collapse", :href => "javascript:;"}
+                %h4 Server Status
+            #serverstatus.widget-body.collapse.in
+              .clearfix{:style => "padding: 10px 24px;"}
+                .pull-left
+                  #serverload.easypiechart{"data-percent" => "67"}
+                    %span.percent
+                  %label{:for => "serverload"} Load
+                .pull-right
+                  #ramusage.easypiechart{"data-percent" => "20.6"}
+                    %span.percent
+                  %label{:for => "ramusage"} RAM: 422MB
+      / END RIGHTBAR
+      #page-content
+        #wrap
+          #page-heading
+            %ol.breadcrumb
+              %li.active
+                %a{:href => "index.htm"} Dashboard
+            %h1 Dashboard
+            .options
+              .btn-toolbar
+                %button#daterangepicker2.btn.btn-default
+                  %i.fa.fa-calendar-o
+                  %span.hidden-xs.hidden-sm December 9, 2013 - January 8, 2014
+                  %b.caret
+                .btn-group.hidden-xs
+                  %a.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    %i.fa.fa-cloud-download
+                    %span.hidden-xs.hidden-sm.hidden-md Export as
+                    %span.caret
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "#"} Text File (*.txt)
+                    %li
+                      %a{:href => "#"} Excel File (*.xlsx)
+                    %li
+                      %a{:href => "#"} PDF File (*.pdf)
+                %a.btn.btn-default.hidden-xs{:href => "#"}
+                  %i.fa.fa-cog
+          .container
+            .row
+              .col-md-12
+                .row
+                  .col-md-3.col-xs-12.col-sm-6
+                    %a.info-tiles.tiles-toyo{:href => "#"}
+                      .tiles-heading Profit
+                      .tiles-body-alt
+                        / i class="fa fa-bar-chart-o"></i
+                        .text-center
+                          %span.text-top> $
+                          854
+                        %small +8.7% from last period
+                      .tiles-footer more info
+                  .col-md-3.col-xs-12.col-sm-6
+                    %a.info-tiles.tiles-success{:href => "#"}
+                      .tiles-heading Revenue
+                      .tiles-body-alt
+                        / i class="fa fa-money"></i
+                        .text-center
+                          %span.text-top> $
+                          22.7
+                          %span.text-smallcaps k
+                        %small -13.5% from last week
+                      .tiles-footer go to accounts
+                  .col-md-3.col-xs-12.col-sm-6
+                    %a.info-tiles.tiles-orange{:href => "#"}
+                      .tiles-heading Members
+                      .tiles-body-alt
+                        %i.fa.fa-group
+                        .text-center 109
+                        %small new users registered
+                      .tiles-footer manage members
+                  .col-md-3.col-xs-12.col-sm-6
+                    %a.info-tiles.tiles-alizarin{:href => "#"}
+                      .tiles-heading Orders
+                      .tiles-body-alt
+                        %i.fa.fa-shopping-cart
+                        .text-center 57
+                        %small new orders received
+                      .tiles-footer manage orders
+            .row
+              .col-md-6
+                .panel.panel-info
+                  .panel-body
+                    .row
+                      .col-md-12.clearfix
+                        %h4.pull-left{:style => "margin: 0 0 20px;"}
+                          User Report
+                          %small (weekly)
+                        .btn-group.pull-right
+                          %a.btn.btn-default.btn-sm.active{:href => "javascript:;"} this week
+                          %a.btn.btn-default.btn-sm{:href => "javascript:;"} previous week
+                      .col-md-12
+                        #site-statistics{:style => "height:250px;"}
+              .col-md-6
+                .panel.panel-grape
+                  .panel-body
+                    .row
+                      .col-md-12.clearfix
+                        %h4.pull-left{:style => "margin: 0 0 20px;"}
+                          Annual Sales
+                          %small (by quarter)
+                        .btn-group.pull-right
+                          %a.btn.btn-default.btn-sm.active{:href => "javascript:;"} 2012
+                          %a.btn.btn-default.btn-sm{:href => "javascript:;"} 2011
+                          %a.btn.btn-default.btn-sm{:href => "javascript:;"} 2010
+                      .col-md-12
+                        #budget-variance{:style => "height:250px;"}
+            .row
+              .col-md-12
+                .panel.panel-primary
+                  .panel-body
+                    .row
+                      .col-md-12.clearfix
+                        %h4.pull-left{:style => "margin:0 0 10px"}
+                          Site Reports
+                          %small (overview)
+                        .pull-right
+                          %a.btn.btn-default-alt.btn-sm{:href => "javascript:;"}
+                            %i.fa.fa-refresh
+                          %a.btn.btn-default-alt.btn-sm{:href => "javascript:;"}
+                            %i.fa.fa-wrench
+                          %a.btn.btn-default-alt.btn-sm{:href => "javascript:;"}
+                            %i.fa.fa-cog
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexvisits{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 7,451
+                        %p{:style => "text-align: center; margin: 0;"} Visits
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexpageviews{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 35,711
+                        %p{:style => "text-align: center; margin: 0;"} Page Views
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexpagesvisit{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 6.92
+                        %p{:style => "text-align: center; margin: 0;"} Pages / Visit
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexavgvisit{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 00:04:17
+                        %p{:style => "text-align: center; margin: 0;"} Average Visit Time
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexnewvisits{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 71.27%
+                        %p{:style => "text-align: center; margin: 0;"} New Visits
+                      .col-xs-6.col-sm-6.col-md-2
+                        #indexbouncerate{:style => "width: 90px; margin: 0 auto; padding: 10px 0 6px;"}
+                          %canvas{:height => "45", :style => "display: inline-block; width: 90px; height: 45px; vertical-align: top;", :width => "90"}
+                        %h3{:style => "text-align: center; margin: 0; color: #808080;"} 31.08%
+                        %p{:style => "text-align: center; margin: 0;"} Bounce Rate
+            .row
+              .col-xs-12.col-md-3.col-sm-6.col-lg-3
+                %a.info-tiles.tiles-alizarin{:href => "#"}
+                  .tiles-heading
+                    .pull-left Comments
+                    .pull-right +15.6%
+                  .tiles-body
+                    .pull-left
+                      %i.fa.fa-comments-o
+                    .pull-right
+                      #indexinfocomments{:style => "margin-top: 10px; margin-bottom: -10px;"}
+              .col-xs-12.col-md-3.col-sm-6.col-lg-3
+                %a.info-tiles.tiles-orange{:href => "#"}
+                  .tiles-heading
+                    .pull-left Likes
+                    .pull-right -5.5%
+                  .tiles-body
+                    .pull-left
+                      %i.fa.fa-thumbs-o-up
+                    .pull-right
+                      #indexinfolikes{:style => "margin-top: 10px; margin-bottom: -10px;"}
+              .col-xs-12.col-md-3.col-sm-6.col-lg-3
+                %a.info-tiles.tiles-success{:href => "#"}
+                  .tiles-heading
+                    .pull-left Bugs Fixed
+                    .pull-right +14.9%
+                  .tiles-body
+                    .pull-left
+                      %i.fa.fa-check
+                    .pull-right 37
+              .col-xs-12.col-md-3.col-sm-6.col-lg-3
+                %a.info-tiles.tiles-toyo{:href => "#"}
+                  .tiles-heading
+                    .pull-left Downloads
+                    .pull-right -9.8%
+                  .tiles-body
+                    .pull-left
+                      %i.fa.fa-download
+                    .pull-right
+                      3.67
+                      %span.text-smallcaps k
+            .row
+              .col-md-6
+                .panel.panel-grape
+                  .panel-body
+                    .row
+                      .col-md-12.clearfix
+                        %h4.pull-left{:style => "margin:0 0 10px"}
+                          Visitor Statistics
+                          %small (overview)
+                        .btn-group.pull-right
+                          %a#updatePieCharts.btn.btn-default-alt.btn-sm{:href => "javascript:;"} Refresh
+                      .col-xs-6.col-sm-6.col-md-4{:style => "padding-top:10px;padding-bottom:10px;"}
+                        #returningvisits.easypiechart{"data-percent" => "65"}
+                          %span.percent
+                        %label{:for => "newvisits"} Returning Visits
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-4{:style => "padding-top:10px;padding-bottom:10px;"}
+                        %span#newvisitor.easypiechart{"data-percent" => "81"}
+                          %span.percent
+                        %label{:for => "bouncerate"} New Visitor
+                        %hr.hidden-md.hidden-lg
+                      .col-xs-6.col-sm-6.col-md-4{:style => "padding-top:10px;padding-bottom:10px;"}
+                        %span#clickrate.easypiechart{"data-percent" => "42"}
+                          %span.percent
+                        %label{:for => "clickrate"} Click Rate
+              .col-md-6
+                .panel.panel-orange
+                  .panel-body
+                    .row
+                      .col-md-12.clearfix
+                        %h4.pull-left{:style => "margin: 0 0 20px;"} Server Load
+                        .btn-group.pull-right
+                          %a.btn.btn-default.btn-sm.active{:href => "javascript:;"} Server #1
+                          %a.btn.btn-default.btn-sm{:href => "javascript:;"} Server #2
+                      .col-md-12
+                        #server-load{:style => "height:125px"}
+            .row
+              .col-md-6
+                .panel.panel-indigo
+                  .panel-heading
+                    %h4 User Accounts
+                    .options
+                      %a{:href => "javascript:;"}
+                        %i.fa.fa-cog
+                      %a{:href => "javascript:;"}
+                        %i.fa.fa-wrench
+                      %a.panel-collapse{:href => "javascript:;"}
+                        %i.fa.fa-chevron-down
+                  .panel-body
+                    .table-responsive
+                      %table.table{:style => "margin-bottom: 0px;"}
+                        %thead
+                          %tr
+                            %th.col-xs-1.col-sm-1
+                              %input#select-all{:type => "checkbox"}/
+                            %th.col-xs-9.col-sm-3 User ID
+                            %th.col-sm-6.hidden-xs Email Address
+                            %th.col-xs-2.col-sm-2 Status
+                        %tbody.selects
+                          %tr
+                            %td
+                              %input{:type => "checkbox"}/
+                            %td #{@users.first_name}
+                            %td.hidden-xs cranstonb@gnail.com
+                            %td
+                              %span.label.label-success Approved
+
+                        %tfoot
+                          %tr.active
+                            %td.text-left{:colspan => "4"}
+                              %label{:for => "action", :style => "margin-bottom:0"} Action
+                              %select{:name => "action"}
+                                %option{:value => "Edit"} Edit
+                                %option{:value => "Aprove"} Aprove
+                                %option{:value => "Move"} Move
+                                %option{:value => "Delete"} Delete
+              .col-md-6
+                .panel.panel-grape
+                  .panel-heading
+                    %h4
+                      %i.icon-highlight.fa.fa-check
+                      To-do List
+                    /
+                      <div class="options">
+                      <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                      <a href="javascript:;"><i class="fa fa-wrench"></i></a>
+                      <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a>
+                      </div>
+                  .panel-body
+                    %ul.panel-tasks
+                      %li.item-danger
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Write documentation for theme
+                            %span.label.label-info 6 Days
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li.item-primary
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Compile code
+                            %span.label.label-primary 3 Days
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li.item-info
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Upload files to server
+                            %span.label.label-orange Tomorrow
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li.item-success
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Call client
+                            %span.label.label-danger Today
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Buy some milk
+                            %span.label.label-danger Today
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Setup meeting with client
+                            %span.label.label-sky 2 Weeks
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                      %li
+                        %label
+                          %i.fa.fa-ellipsis-v.icon-dragtask
+                          %input{:type => "checkbox"}
+                            %span.task-description Pay office rent and bills
+                            %span.label.label-sky 3 Weeks
+                        .options.todooptions
+                          .btn-group
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-check
+                            %button.btn.btn-default.btn-xs
+                              %i.fa.fa-cog
+                    %a.btn.btn-success.btn-sm.pull-left{:href => "#"} Add Tasks
+                    %a.btn.btn-default-alt.btn-sm.pull-right{:href => "#"} See All Tasks
+            .row
+              .col-md-6
+                .panel.panel-inverse
+                  .panel-heading
+                    %h4
+                      %i.icon-highlight.fa.fa-calendar
+                      Calendar
+                    .options
+                      %a{:href => "javascript:;"}
+                        %i.fa.fa-cog
+                      %a{:href => "javascript:;"}
+                        %i.fa.fa-wrench
+                      %a.panel-collapse{:href => "javascript:;"}
+                        %i.fa.fa-chevron-down
+                  #calendardemo.panel-body
+                    #calendar-drag
+              .col-md-6
+                .panel.panel-midnightblue
+                  .panel-heading
+                    %h4
+                      %ul.nav.nav-tabs
+                        %li.active
+                          %a{"data-toggle" => "tab", :href => "#threads"}
+                            %i.fa.fa-list.visible-xs.icon-scale
+                            %span.hidden-xs Threads
+                        %li
+                          %a{"data-toggle" => "tab", :href => "#comments"}
+                            %i.fa.fa-comments.visible-xs.icon-scale
+                            %span.hidden-xs Comments
+                        %li
+                          %a{"data-toggle" => "tab", :href => "#users"}
+                            %i.fa.fa-group.visible-xs.icon-scale
+                            %span.hidden-xs Users
+                    /
+                      <div class="options">
+                      <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                      <a href="javascript:;"><i class="fa fa-wrench"></i></a>
+                      </div>
+                  .panel-body
+                    .tab-content
+                      #threads.tab-pane.active
+                        %ul.panel-threads
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.time 20 mins
+                                %a.title{:href => "#"} Envato’s Most Wanted – $5,000 Reward for Music & Band Themes and Templates
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Jim Gordon
+                                  in
+                                  %a{:href => "#"} Section #3
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.time 2 hrs
+                                %a.title{:href => "#"} How to create a corporate wordpress theme?
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Simon Corbett
+                                  in
+                                  %a{:href => "#"} Section #15
+                          %li
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
+                              .content
+                                %span.time 4 hrs
+                                %a.title{:href => "#"} Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Jeff Dangerfield
+                                  in
+                                  %a{:href => "#"} Section #9
+                          %li
+                            %img{:alt => "Doyle", :src => "/assets/doyle.png"}
+                              .content
+                                %span.time 13 hrs
+                                %a.title{:href => "#"} Pros and Cons of Using Grids in Responsive Web Design
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Alan Doyle
+                                  in
+                                  %a{:href => "#"} Section #11
+                          %li
+                            %img{:alt => "Jackson", :src => "/assets/jackson.png"}
+                              .content
+                                %span.time 19 hrs
+                                %a.title{:href => "#"} Best Web & Graphic Design Proposal Software
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Eric Jackson
+                                  in
+                                  %a{:href => "#"} Section #18
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.time 20 mins
+                                %a.title{:href => "#"} Envato’s Most Wanted – $5,000 Reward for Music & Band Themes and Templates
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Jim Gordon
+                                  in
+                                  %a{:href => "#"} Section #3
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.time 2 hrs
+                                %a.title{:href => "#"} How to create a corporate wordpress theme?
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Simon Corbett
+                                  in
+                                  %a{:href => "#"} Section #15
+                          %li
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
+                              .content
+                                %span.time 4 hrs
+                                %a.title{:href => "#"} Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Jeff Dangerfield
+                                  in
+                                  %a{:href => "#"} Section #9
+                          %li
+                            %img{:alt => "Doyle", :src => "/assets/doyle.png"}
+                              .content
+                                %span.time 13 hrs
+                                %a.title{:href => "#"} Pros and Cons of Using Grids in Responsive Web Design
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Alan Doyle
+                                  in
+                                  %a{:href => "#"} Section #11
+                          %li
+                            %img{:alt => "Jackson", :src => "/assets/jackson.png"}
+                              .content
+                                %span.time 19 hrs
+                                %a.title{:href => "#"} Best Web & Graphic Design Proposal Software
+                                %span.thread
+                                  asked by
+                                  %a{:href => "#"} Eric Jackson
+                                  in
+                                  %a{:href => "#"} Section #18
+                        %a.btn.btn-default-alt.btn-sm.pull-right{:href => "#"} Load More
+                      #comments.tab-pane
+                        %ul.panel-comments
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Jim Gordon
+                                  commented on
+                                  %a{:href => "#"} Article #121
+                                Just wondering - can random users see our comments? If so, allow them to comment!
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Simon Corbett
+                                  commented on
+                                  %a{:href => "#"} Article #55
+                                Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/paton.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Polly Paton
+                                  commented on
+                                  %a{:href => "#"} Article #12
+                                I’m sure there is a tool for that.
+                          %li
+                            %img{:alt => "Watson", :src => "/assets/watson.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Annie Watson
+                                  commented on
+                                  %a{:href => "#"} Article #223
+                                We have enough problems with Spammers already without letting non members leave comments.
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Jim Gordon
+                                  commented on
+                                  %a{:href => "#"} Article #121
+                                Just wondering - can random users see our comments? If so, allow them to comment!
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Simon Corbett
+                                  commented on
+                                  %a{:href => "#"} Article #55
+                                Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/paton.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Polly Paton
+                                  commented on
+                                  %a{:href => "#"} Article #12
+                                I’m sure there is a tool for that.
+                          %li
+                            %img{:alt => "Watson", :src => "/assets/watson.png"}
+                              .content
+                                %span.actions
+                                  .options
+                                    .btn-group
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-pencil
+                                      %button.btn.btn-default.btn-xs
+                                        %i.fa.fa-times
+                                %span.commented
+                                  %a{:href => "#"} Annie Watson
+                                  commented on
+                                  %a{:href => "#"} Article #223
+                                We have enough problems with Spammers already without letting non members leave comments.
+                        %a.btn.btn-default-alt.btn-sm.pull-right{:href => "#"} Load More
+                      #users.tab-pane
+                        %ul.panel-users
+                          %li
+                            %img{:alt => "Paton", :src => "/assets/paton.png"}
+                              .content
+                                %span.time 11 mins
+                                %span.desc
+                                  %a{:href => "#"} Polly Paton
+                                  followed
+                                  %a{:href => "#"} John White
+                          %li
+                            %img{:alt => "Tennant", :src => "/assets/tennant.png"}
+                              .content
+                                %span.time 48 mins
+                                %span.desc
+                                  %a{:href => "#"} David Tennant
+                                  unfollowed
+                                  %a{:href => "#"} Tony Doubleday
+                          %li
+                            %img{:alt => "Jobs", :src => "/assets/jobs.png"}
+                              .content
+                                %span.time 5 hrs
+                                %span.desc
+                                  %a{:href => "#"} Howard Jobs
+                                  commented on
+                                  %a{:href => "#"} Selling PSD Template Rights!
+                          %li
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
+                              .content
+                                %span.time 6 hrs
+                                %span.desc
+                                  %a{:href => "#"} Jeff Dangerfield
+                                  posted on
+                                  %a{:href => "#"} Please help with Theme Design
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.time 22 hrs
+                                %span.desc
+                                  %a{:href => "#"} Jim Gordon
+                                  followed
+                                  %a{:href => "#"} Polly Paton
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.time 3 days
+                                %span.desc
+                                  %a{:href => "#"} Simon Corbett
+                                  followed
+                                  %a{:href => "#"} Anna Johansson
+                          %li
+                            %img{:alt => "Paton", :src => "/assets/paton.png"}
+                              .content
+                                %span.time 11 mins
+                                %span.desc
+                                  %a{:href => "#"} Polly Paton
+                                  followed
+                                  %a{:href => "#"} John White
+                          %li
+                            %img{:alt => "Tennant", :src => "/assets/tennant.png"}
+                              .content
+                                %span.time 48 mins
+                                %span.desc
+                                  %a{:href => "#"} David Tennant
+                                  unfollowed
+                                  %a{:href => "#"} Tony Doubleday
+                          %li
+                            %img{:alt => "Jobs", :src => "/assets/jobs.png"}
+                              .content
+                                %span.time 5 hrs
+                                %span.desc
+                                  %a{:href => "#"} Howard Jobs
+                                  commented on
+                                  %a{:href => "#"} Selling PSD Template Rights!
+                          %li
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
+                              .content
+                                %span.time 6 hrs
+                                %span.desc
+                                  %a{:href => "#"} Jeff Dangerfield
+                                  posted on
+                                  %a{:href => "#"} Please help with Theme Design
+                          %li
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
+                              .content
+                                %span.time 22 hrs
+                                %span.desc
+                                  %a{:href => "#"} Jim Gordon
+                                  followed
+                                  %a{:href => "#"} Polly Paton
+                          %li
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
+                              .content
+                                %span.time 3 days
+                                %span.desc
+                                  %a{:href => "#"} Simon Corbett
+                                  followed
+                                  %a{:href => "#"} Anna Johansson
+                        %a.btn.btn-default-alt.btn-sm.pull-right{:href => "#"} Load More
+      / container
+      / wrap
+      / page-content
+      %footer{:role => "contentinfo"}
+        .clearfix
+          %ul.list-unstyled.list-inline.pull-left
+            %li AVANT &copy; 2015
+          %button#back-to-top.pull-right.btn.btn-inverse-alt.btn-xs.hidden-print
+            %i.fa.fa-arrow-up
